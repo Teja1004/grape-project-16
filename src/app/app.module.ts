@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GrapeComponent } from './greps.component';
+import { NgxGrapesjsModule } from 'ngx-grapesjs';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +13,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxGrapesjsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, GrapeComponent]
 })
 export class AppModule { }

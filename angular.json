@@ -25,9 +25,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/grapesjs/dist/css/grapes.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/grapesjs/dist/grapes.min.js",
+              "node_modules/grapesjs-preset-newsletter/dist/index.js",
+              "node_modules/grapesjs-preset-webpage/dist/index.js",
+              "node_modules/grapesjs-blocks-basic/dist/index.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,12 +93,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/grapesjs/dist/css/grapes.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7df00955-2454-4520-a0ec-08d3f86afc32"
   }
 }
