@@ -35,6 +35,33 @@ export class AppComponent implements OnInit {
   private initializeEditor(): any {
     const config: GrapesjsConfig = {
       container: '#gjs', // Replace with your container element ID if needed
+      canvas: {
+        styles: [
+          'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap', // Load Merriweather font inside GrapesJS iframe
+        ],
+      },
+      styleManager: {
+        sectors: [
+          {
+            name: 'Typography',
+            buildProps: ['font-family', 'font-size', 'font-weight', 'color'],
+            properties: [
+              {
+                name: 'Font Family',
+                property: 'font-family',
+                type: 'select',
+                defaults: 'Times New Roman, serif',
+                options: [
+                  { value: 'Arial, sans-serif', name: 'Arial' },
+                  { value: 'Helvetica, sans-serif', name: 'Helvetica' },
+                  { value: 'Times New Roman, serif', name: 'Times New Roman' },
+                  { value: 'Merriweather, serif', name: 'Merriweather' }, // Your added font
+                ],
+              },
+            ],
+          },
+        ],
+      },
       autorender: true,
       forceClass: false,
       components: '',
@@ -92,6 +119,8 @@ export class AppComponent implements OnInit {
 
 export interface GrapesjsConfig {
   container: string;
+  canvas: {},
+  styleManager: {},
   autorender?: boolean;
   forceClass?: boolean;
   components?: string;
